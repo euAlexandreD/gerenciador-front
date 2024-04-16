@@ -11,21 +11,4 @@ body {
     font-family: "Archivo", sans-serif;
     background: $background-color;
     color: $text-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-input {
-    font-family: "Archivo", sans-serif;
-    width: 15rem;
-    height: 3rem;
-    background: $background-color;
-    border: none;
-    border-bottom: 1px solid $text-color;
-    color: $text-color;
-}
-
-input:focus {
-    outline: none;
 }
