@@ -1,0 +1,31 @@
+$background-color: linear-gradient(259.93deg, #000000 -41.68%, #00171f 146.85%);
+$text-color: #fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Archivo", sans-serif;
+    background: $background-color;
+    color: $text-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    font-family: "Archivo", sans-serif;
+    width: 15rem;
+    height: 3rem;
+    background: $background-color;
+    border: none;
+    border-bottom: 1px solid $text-color;
+    color: $text-color;
+}
+
+input:focus {
+    outline: none;
+}
