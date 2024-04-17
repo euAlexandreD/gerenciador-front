@@ -1,36 +1,35 @@
 import "./TaskItem.scss";
+
 import { AiFillDelete } from "react-icons/ai";
 
-export const TaskItem = ({ task }) => {
+const TaskItem = ({ task }) => {
     return (
-        <>
-            <div className="task-item-container">
-                <div className="task-description">
-                    <label
+        <div className="task-item-container">
+            <div className="task-description">
+                <label
+                    className={
+                        task.isCompleted
+                            ? "checkbox-container-completed"
+                            : "checkbox-container"
+                    }
+                >
+                    {task.description}
+                    <input type="checkbox" defaultChecked={task.isCompleted} />
+                    <span
                         className={
                             task.isCompleted
-                                ? "checkbox-container-completed"
-                                : "checkbox-container"
+                                ? "checkmark completed"
+                                : "checkmark"
                         }
-                    >
-                        {task.description}
-                        <input
-                            type="checkbox"
-                            defaultChecked={task.isCompleted}
-                        />
-                        <span
-                            className={
-                                task.isCompleted
-                                    ? "checkmark completed"
-                                    : "checkmark"
-                            }
-                        ></span>
-                    </label>
-                </div>
-                <div className="delete">
-                    <AiFillDelete size={18} color="#f97474" />
-                </div>
+                    ></span>
+                </label>
             </div>
-        </>
+
+            <div className="delete">
+                <AiFillDelete size={18} color="#F97474" />
+            </div>
+        </div>
     );
 };
+
+export default TaskItem;
